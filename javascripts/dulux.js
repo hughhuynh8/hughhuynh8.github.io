@@ -6,7 +6,7 @@ var dulux = (function() {
 		submitBtn : "#send",
 
 		// URLs
-		webServiceURL : "http://date.jsontest.com", // date Web Service Endpoint
+		webServiceURL : "https://httpbin.org/ip", // date Web Service Endpoint
 		resultURL : "results.html" // results page
 
 	}
@@ -39,7 +39,7 @@ var dulux = (function() {
 						    $(DEFAULTS.loadingDiv).hide();
 						 },
 			    		success: function(result){
-			    			saveToLocal(result.date);
+			    			saveToLocal(result.origin);
 			    		}
 			    	}).done(function () {
 				        window.location.href = DEFAULTS.resultURL;
